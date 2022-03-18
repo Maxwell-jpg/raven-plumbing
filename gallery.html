@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Raven plumbing</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="nav-wrapper">
+      <nav>
+        <ul class="nav-list">
+          <div class="logo">
+            <img src="logo.png" alt="boiler" width="180px" />
+          </div>
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <button id="openBookingModal" onclick="showBookingModal()">
+              Book a Service
+            </button>
+          </li>
+          <li>
+            <button id="openContactModal" onclick="showContactModal()">
+              Contact
+            </button>
+          </li>
+          <li><a href="gallary.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- gallery -->
+
+    <div class="gallery-container" >
+
+      <div class="gallery-content" >
+        <img src="grafiti.jpg" alt="scr unavailable" width="175px" />
+      </div>
+
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px"  />
+      </div>
+      <div class="gallery-content">
+        <img src="grafiti.jpg" alt="scr unavailable" width="175px"  />
+      </div>
+      <div class="gallery-content">
+        <img src="bigBen.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="grafiti.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="bigBen.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="grafiti.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="bigBen.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="bg.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="grafiti.jpg" alt="pic unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="bigBen.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="bg.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="bigBen.jpg" alt="scr unavailable" width="175px" />
+      </div>
+      <div class="gallery-content">
+        <img src="vicMon.jpg" alt="scr unavailable" width="175px" />
+      </div>
+    </div>
+
+    <!--view pic model-->
+    <div class="imageModel">
+   <span>
+              <button id="exit-model" onclick="exitModel()">X</button>
+            </span>
+  <div class="imageCon">
+   
+  </div>
+
+    <!-- booking modal -->
+
+   <div class="bookingModal">
+      <div class="modalCon">
+        <div class="header-con">
+          <header>
+             <span>
+              <button id="exit-model" onclick="exitModel()">X</button>
+            </span>
+            <h3>Book a Service</h3>
+          </header>
+        </div>
+        <div class="form-con">
+          <form method="post" name="bookingForm">
+
+            <label class="modelLabel" for="fname"> First Name</label>
+            <br />
+            <input class="modalInput" name="fname" id="fname" type="text" required/>
+            <br>
+            <label class="modelLabel" for="lname"> Surname</label>
+            <br />
+            <input class="modalInput" name="surname" id="lname" type="text" required />
+            <br>
+            <label class="modelLabel" for="number">Phone Number</label>
+            <br />
+            <input class="modalInput" name="phoneNo" id="number" type="text" required />
+            <br>
+            <label class="modelLabel" for="email">Email</label>
+            <br />
+            <input class="modalInput" name="email" id="email" type="email" required/>
+            <br>
+            <label class="modelLabel" for="Address">Address</label>
+            <br />
+            <input class="modalInput" name="address" id="address" type="text" required />
+            <br />
+            <input class="modalInput" name="address" id="address" type="text" required />
+            <br>
+            <label class="modelLabel" for="Postcode">Postcode</label>
+            <br />
+            <input class="modalInput" name="postcode" id="postcode" type="text"required />
+            <br>
+            <label class="modelLabel" for="date"> Date and time</label>
+            <br />
+            <input class="modalInput" name="TanD" id="TanD" type="datetime-local" required />
+            <br>
+            <label class="modelLabel" for="date"> Annual Reminder</label>
+            <br />
+            <input  id="remind" name="checkbox" type="checkbox"/>
+            <br />
+            <button
+              class="modalBtn"
+              type="submit"
+              onclick="postToServer(),postToEmail()"
+            >
+              Submit
+            </button>
+            <br />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--contact modal-->
+    <div class="contactModal">
+      <div class="modalCon">
+        <div class="contact-con">
+           <span>
+              <button id="exit-model" onclick="exitModel()">X</button>
+            </span>
+          <h3>Contact Details</h3>
+
+          <p>
+            If you would like me to view a job please do not hesitate
+            to call or email me:
+          </p>
+          <br>
+          <h4>Phone Number</h4>
+          <p>07864785488
+          </p>
+          <br>
+          <h4>Email</h4>
+          <p>karry.raven@emailme.co.uk</p>
+
+          <br />
+        
+      </div>
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

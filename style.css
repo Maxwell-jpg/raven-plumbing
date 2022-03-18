@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+/* navbar */
+
+.nav-wrapper {
+  width: 100%;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  box-shadow: 1px 3px 5px 7px #5d62645d;
+  background-image: url(/nav.png);
+  z-index: 1;
+}
+
+.nav-list {
+  list-style: none;
+  align-items: stretch;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 20px;
+}
+
+.nav-list li {
+  display: inline;
+  padding-top: 30px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#openBookingModal {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+#openContactModal {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.nav-list li a:hover {
+  color: #808c8c;
+}
+
+#openBookingModal:hover,
+#openContactModal:hover {
+  color: #808c8c;
+}
+
+/* welcome animation */
+
+.background-con {
+  width: 100%;
+  position: relative;
+}
+
+#cap-1 {
+  position: absolute;
+  background-color: rgba(105, 105, 105, 0.253);
+  padding: 6px;
+  border-radius: 10px;
+  bottom: 85%;
+  left: 10%;
+  color: rgb(0, 0, 0);
+  animation-name: caption_1;
+  animation-duration: 2.5s;
+}
+
+#cap-2 {
+  position: absolute;
+  background-color: rgba(105, 105, 105, 0.36);
+  border-radius: 10px;
+  width: 50%;
+  padding: 8px;
+  top: 27%;
+  right: 10%;
+  color: rgb(0, 0, 0);
+  animation-name: caption_2;
+  animation-duration: 2.5s;
+}
+
+@keyframes caption_1 {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 85%;
+  }
+}
+
+@keyframes caption_2 {
+  0% {
+    opacity: 0;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    top: 27%;
+  }
+}
+
+/* 
+modals */ /* contact modal and exit btn for both modals */
+.bookingModal {
+  max-width: auto;
+  background-color: #818485;
+  border: 2px solid #b87333;
+  border-radius: 10px;
+  position: absolute;
+  display: inline-block;
+  top: 35%;
+  left: 40%;
+  transition: 0.5s;
+}
+
+.modalCon {
+  width: auto;
+  margin: 15px;
+  justify-content: center;
+  border: 4px solid #b87333;
+  border-radius: 10px;
+}
+
+.header-con {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #ebee14;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form-con {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #ebee14;
+  display: inline-block;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-sizing: border-box;
+}
+
+.modelLabel {
+  color: rgb(34, 36, 37);
+}
+
+.modalInput {
+  border: none;
+  background-color: #ebee14;
+  border-radius: 5px;
+  text-align: center;
+  margin: 12px;
+  outline: 1px solid #808c8c;
+  padding: 3px 5px;
+}
+
+.modalBtn {
+  background-color: #b87333;
+  border: 2px solid rgb(34, 36, 37);
+  border-radius: 5px;
+  margin-top: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.modalBtn:hover {
+  background-color: rgb(34, 36, 37);
+  color: #b87333;
+  border: 2px solid #b87333;
+}
+
+.contactModal {
+  max-width: 50%;
+  background-color: #5d6264;
+  border: 2px solid #b87333;
+  border-radius: 10px;
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  transition: 0.5s;
+}
+
+.contact-con {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #ebee14;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#exit-model {
+  float: right;
+  margin-right: 5%;
+  border: none;
+  background-color: transparent;
+  color: rgb(34, 36, 37);
+  font-size: 18px;
+}
+
+#exit-model:hover {
+  color: #b87333;
+}
+
+/* gallery layout */
+
+.gallery-content {
+  background-color: #b87333;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px;
+  margin: 5px;
+  border: 2px solid rgb(8, 8, 8);
+  border-radius: 5px;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.gallery-container {
+  width: 100%;
+  background-color: #afa8a8c4;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.gallery-content:hover {
+  background-color: #f8e003;
+}
